@@ -1,8 +1,11 @@
+import '../src/styles/reset.scss';
+import { Home } from './pages/Home';
+
 export function App() {
   return (
     <>
       <div>
-        <h1>Hello World</h1>
+        <Home />
       </div>
     </>
   );

@@ -1,0 +1,30 @@
+/* Cores principais */
+$primary-color: #00687B;
+$primary-light: #0093A4;
+$primary-dark: #004B59;
+
+/* Cores de fundo (Cinzas azulados) */
+$background-light: #F0F4F5;
+$background-medium: #D9E2E4;
+$background-dark: #B0BCC0;
+
+/* Cores de texto */
+$text-primary: #1A1A1A;
+$text-secondary: #4D4D4D;
+$text-muted: #757575;
+
+/* Cores de suporte */
+$success: #2ECC71;
+$info: #3498DB;
+$warning: #F1C40F;
+$danger: #E74C3C;
+
+/* Cores neutras */
+$white: #FFFFFF;
+$black: #000000;
+$border-color: #E0E0E0;
+$overlay: rgba(0, 0, 0, 0.5);
+
+/* Gradientes */
+$gradient-primary: linear-gradient(135deg, $primary-color, $primary-dark);
+$gradient-secondary: linear-gradient(135deg, $primary-light, $primary-color);

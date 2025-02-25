@@ -1,0 +1,68 @@
+@use '../styles/variables.scss' as *;
+
+.landing-page {
+  .header {
+    background-color: $primary-color;
+    color: $white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 2em;
+    }
+    nav ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      li a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+          color: $primary-light;
+        }
+      }
+    }
+  }
+  .about,
+  .gallery,
+  .religion,
+  .donation {
+    padding: 50px 20px;
+    text-align: center;
+    h2 {
+      color: $primary-dark;
+      margin-bottom: 20px;
+    }
+    p {
+      color: $text-secondary;
+    }
+  }
+  .gallery .images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .donation button {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+  .footer {
+    background-color: $background-dark;
+    color: $white;
+    text-align: center;
+    padding: 10px;
+  }
+}

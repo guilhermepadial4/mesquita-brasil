@@ -1,0 +1,76 @@
+/* Reset de margens, paddings e box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografia básica */
+html {
+  font-family: 'Merriweather', serif;
+  font-size: 100%; // 16px padrão
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth; // Navegação suave
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* Links sem sublinhado e com herança de cor */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Removendo estilos padrão de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Imagens e mídia responsiva */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botões e inputs */
+button,
+input,
+textarea,
+select {
+  font: inherit; // Herda a fonte do elemento pai
+  border: none;
+  outline: none;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+/* Cabeçalhos e parágrafos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  line-height: 1.2;
+}
