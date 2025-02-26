@@ -1,0 +1,116 @@
+@use '../../styles/variables.scss' as *;
+
+.footer {
+  font-size: 1em;
+  color: $text-primary;
+
+  background-color: $background-light;
+
+  border-top: 1px solid $border-color;
+
+  padding: 40px 20px;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+    }
+  }
+
+  .footer-description {
+    text-align: center;
+
+    max-width: 350px;
+
+    h3 {
+      font-size: 1.5em;
+      color: $primary-color;
+
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      font-style: italic;
+      color: $text-secondary;
+    }
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 1em;
+      color: $text-secondary;
+    }
+
+    a {
+      font-size: 1em;
+      text-decoration: none;
+      color: $text-secondary;
+
+      transition: color 0.3s;
+
+      &:hover {
+        color: $primary-dark;
+      }
+    }
+
+    .info-icon {
+      font-size: 1.2em;
+      color: $text-muted;
+    }
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 20px;
+
+    .social-icon {
+      font-size: 1.5em;
+      color: $text-muted;
+
+      transition: color 0.3s;
+
+      &:hover {
+        color: $primary-dark;
+      }
+    }
+  }
+
+  .divider {
+    width: 95%;
+    height: 2px;
+
+    background-color: $border-color;
+
+    margin: 30px auto;
+  }
+
+  .footer-copyright {
+    text-align: center;
+
+    font-size: 0.9em;
+    color: $text-tertiary;
+
+    margin-top: 30px;
+    margin-bottom: -20px;
+  }
+}

@@ -1,9 +1,12 @@
-import './home.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
+import { DonationCard } from './donation/Donation';
+import { Footer } from './footer/Footer';
 
 import Logo from '../assets/logo.png';
 import People from '../assets/people.png';
@@ -18,7 +21,8 @@ import Woman2 from '../assets/woman2.png';
 import Kids from '../assets/kids.png';
 import IslamicImage from '../assets/islamic-moon.png';
 import Islamic from '../assets/islamic.png';
-import { DonationCard } from './donation/Donation';
+
+import './home.scss';
 
 export const Home = () => {
   const images = [People, People2, Kids, People3, Woman, People4, Woman2, People6, People5];
@@ -101,9 +105,7 @@ export const Home = () => {
         <DonationCard />
       </div>
 
-      <footer className="footer">
-        <p>&copy; 2025 Mesquita Brasil. Todos os direitos reservados.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
