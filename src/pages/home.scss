@@ -129,17 +129,13 @@
     }
   }
 
-  .gallery,
-  .donation {
+  .gallery {
     text-align: center;
     padding: 50px 20px;
 
     h2 {
       color: $primary-dark;
       margin-bottom: 20px;
-    }
-    p {
-      color: $text-secondary;
     }
   }
 

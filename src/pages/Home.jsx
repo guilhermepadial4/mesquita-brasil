@@ -18,6 +18,7 @@ import Woman2 from '../assets/woman2.png';
 import Kids from '../assets/kids.png';
 import IslamicImage from '../assets/islamic-moon.png';
 import Islamic from '../assets/islamic.png';
+import { DonationCard } from './donation/Donation';
 
 export const Home = () => {
   const images = [People, People2, Kids, People3, Woman, People4, Woman2, People6, People5];
@@ -96,11 +97,9 @@ export const Home = () => {
         </div>
       </section>
 
-      <section id="donation" className="donation">
-        <h2>Faça uma Doação</h2>
-        <p>Sua contribuição ajuda a manter a Mesquita e apoiar a comunidade.</p>
-        <button>Doar Agora</button>
-      </section>
+      <div id="donation">
+        <DonationCard />
+      </div>
 
       <footer className="footer">
         <p>&copy; 2025 Mesquita Brasil. Todos os direitos reservados.</p>
