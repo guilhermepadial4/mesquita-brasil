@@ -11,12 +11,15 @@ import People2 from '../assets/people2.png';
 import People3 from '../assets/people3.png';
 import People4 from '../assets/people4.png';
 import People5 from '../assets/people5.png';
+import People6 from '../assets/people6.png';
+import People7 from '../assets/people7.png';
 import Woman from '../assets/woman.png';
 import Woman2 from '../assets/woman2.png';
+import Kids from '../assets/kids.png';
 import IslamicImage from '../assets/islamic-moon.png';
 
 export const Home = () => {
-  const images = [People, People2, People3, Woman, People4, Woman2, People5];
+  const images = [People, People2, Kids, People3, Woman, People4, Woman2, People6, People5];
 
   return (
     <div className="landing-page">
@@ -43,11 +46,19 @@ export const Home = () => {
       </header>
 
       <section id="about" className="about">
-        <h2>Sobre a Mesquita Brasil</h2>
-        <p>
-          A primeira mesquita da América Latina fundada em 1928. Tem o intuito de propagar a religião e ensina-la com um conteúdo
-          diversificado.
-        </p>
+        <div className="about-content">
+          <div className="about-text">
+            <h2>Sobre a Mesquita Brasil</h2>
+            <p>
+              A primeira mesquita da América Latina fundada em 1928. Tem o intuito de propagar a religião e ensina-la com um conteúdo
+              diversificado.
+            </p>
+            <p className="invitation">Venha nos conhecer e fazer parte dessa jornada de fé!</p>
+          </div>
+          <div className="about-image">
+            <img src={People7} alt="Imagem da Mesquita" />
+          </div>
+        </div>
       </section>
 
       <section id="gallery" className="gallery">
