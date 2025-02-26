@@ -17,6 +17,7 @@ import Woman from '../assets/woman.png';
 import Woman2 from '../assets/woman2.png';
 import Kids from '../assets/kids.png';
 import IslamicImage from '../assets/islamic-moon.png';
+import Islamic from '../assets/islamic.png';
 
 export const Home = () => {
   const images = [People, People2, Kids, People3, Woman, People4, Woman2, People6, People5];
@@ -80,12 +81,19 @@ export const Home = () => {
       </section>
 
       <section id="religion" className="religion">
-        <h2>Sobre o Islamismo</h2>
-        <p>
-          O Islamismo é uma religião monoteísta que acredita em Allah como o único Deus e em Maomé (Muhammad) como seu último profeta. Seus
-          ensinamentos estão no Alcorão, o livro sagrado dos muçulmanos. A fé islâmica valoriza a oração, caridade, jejum e a união da
-          comunidade, promovendo paz, compaixão e justiça.
-        </p>
+        <div className="religion-content">
+          <div className="religion-text">
+            <h2>Sobre o Islamismo</h2>
+            <p>
+              O Islamismo é uma religião monoteísta que acredita em Allah como o único Deus e em Maomé (Muhammad) como seu último profeta.
+              Seus ensinamentos estão no Alcorão, o livro sagrado dos muçulmanos. A fé islâmica valoriza a oração, caridade, jejum e a união
+              da comunidade, promovendo paz, compaixão e justiça.
+            </p>
+          </div>
+          <div className="religion-image">
+            <img src={Islamic} alt="Islamismo" />
+          </div>
+        </div>
       </section>
 
       <section id="donation" className="donation">
