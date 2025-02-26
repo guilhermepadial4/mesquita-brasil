@@ -9,15 +9,12 @@
     z-index: -1;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
     opacity: 0.1;
   }
 
@@ -25,13 +22,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     color: $white;
-
     background-color: $primary-color;
-
     padding: 20px;
-
+    
     img {
       width: 80px;
     }
@@ -39,7 +33,6 @@
     nav ul {
       display: flex;
       gap: 35px;
-
       list-style: none;
 
       li a {
@@ -49,6 +42,15 @@
         &:hover {
           color: $primary-light;
         }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+      nav ul {
+        display: none;
       }
     }
   }
@@ -68,13 +70,11 @@
 
         h2 {
           color: $primary-dark;
-
           margin-bottom: 20px;
         }
 
         p {
           color: $text-secondary;
-
           width: 90%;
         }
 
@@ -83,7 +83,6 @@
           font-weight: bold;
           text-transform: uppercase;
           color: $primary-color;
-
           margin-top: 20px;
 
           cursor: pointer;
@@ -96,14 +95,23 @@
 
       .about-image {
         flex: 0 0 40%;
-
+        
         img {
           width: 100%;
           height: auto;
-
           object-fit: cover;
-
           border-radius: 8px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .about-image {
+          flex: 1;
+          margin-top: 20px;
         }
       }
     }
@@ -121,27 +129,33 @@
       .religion-text {
         h2 {
           color: $primary-dark;
-
           margin-bottom: 20px;
         }
 
         p {
           color: $text-secondary;
-
           width: 85%;
         }
       }
 
       .religion-image {
         flex: 0 0 40%;
-
+        
         img {
           width: 100%;
           height: auto;
-
           object-fit: cover;
-
           border-radius: 8px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+
+        .religion-image {
+          flex: 1;
+          margin-top: 20px;
         }
       }
     }
@@ -149,26 +163,15 @@
 
   .gallery {
     text-align: center;
-
     padding: 50px 20px;
 
     h2 {
       color: $primary-dark;
-
-      margin-bottom: 20px;
-    }
-  }
-
-  .gallery {
-    h2 {
-      color: $primary-dark;
-
       margin-bottom: 20px;
     }
 
     .swiper {
       width: 80%;
-
       margin: 0 auto;
 
       .swiper-slide {
@@ -179,46 +182,32 @@
         img {
           width: 100%;
           height: 250px;
-
           object-fit: cover;
-
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
           border-radius: 10px;
         }
       }
-    }
 
-    .swiper-wrapper {
-      display: flex;
-    }
+      @media (max-width: 768px) {
+        .swiper-slide {
+          flex: 0 0 calc(50% - 10px);
+        }
+      }
 
-    .swiper-slide {
-      flex: 0 0 calc(33.33% - 10px);
-
-      margin-right: 10px;
-    }
-
-    .swiper-pagination-bullet {
-      background-color: $primary-color;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: $primary-color;
+      @media (max-width: 480px) {
+        .swiper-slide {
+          flex: 0 0 100%;
+        }
+      }
     }
   }
 
   .donation button {
     color: $white;
-
     background-color: $primary-color;
-
     border: none;
     border-radius: 5px;
-
     padding: 10px 20px;
-
     cursor: pointer;
 
     &:hover {
