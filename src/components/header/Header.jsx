@@ -29,6 +29,9 @@ export function Header() {
             <a href="#religion" onClick={toggleMenu}>A Religião</a>
           </li>
           <li>
+            <a href="#agenda" onClick={toggleMenu}>Agenda</a>
+          </li>
+          <li>
             <a href="#donation" onClick={toggleMenu}>Doações</a>
           </li>
         </ul>
