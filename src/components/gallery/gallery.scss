@@ -1,0 +1,42 @@
+@use '../../styles/variables.scss' as *;
+
+.gallery {
+  text-align: center;
+  padding: 50px 20px;
+
+  h2 {
+    color: $primary-dark;
+    margin-bottom: 20px;
+  }
+
+  .swiper {
+    width: 80%;
+    margin: 0 auto;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .swiper-slide {
+        flex: 0 0 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .swiper-slide {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

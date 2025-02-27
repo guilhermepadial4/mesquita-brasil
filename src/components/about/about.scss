@@ -1,0 +1,63 @@
+@use '../../styles/variables.scss' as *;
+
+.about {
+  padding: 50px 50px;
+
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .about-text {
+      flex: 1;
+      text-align: left;
+
+      h2 {
+        color: $primary-dark;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: $text-secondary;
+        width: 90%;
+      }
+
+      .invitation {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $primary-color;
+        margin-top: 20px;
+
+        cursor: pointer;
+
+        &:hover {
+          color: $primary-dark;
+        }
+      }
+    }
+
+    .about-image {
+      flex: 0 0 40%;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .about-image {
+        flex: 1;
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@ export function DonationCard() {
   };
 
   return (
-    <div className="donation-card">
+    <div className="donation-card" id='donation'>
       <h2>Contribua para a Comunidade</h2>
       <p className="donation-description">
         Suas doações ajudam na manutenção da Mesquita e em projetos sociais que apoiam famílias necessitadas.
