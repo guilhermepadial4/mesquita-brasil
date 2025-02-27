@@ -2,23 +2,30 @@
 
 .donation-card {
   text-align: left;
-  max-width: 600px;
+
+  max-width: 90%;
+
   background-color: $background-light;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   border-left: 5px solid $primary-color;
   border-radius: 8px;
-  padding: 30px;
+
   margin: 30px auto;
+
+  padding: 30px;
 
   h2 {
     font-size: 1.8em;
     color: $primary-color;
+
     margin-bottom: 10px;
   }
 
   .donation-description {
     font-size: 1em;
     color: $text-secondary;
+
     margin: 10px 0 20px;
   }
 
@@ -26,11 +33,13 @@
     font-size: 1.3em;
     font-weight: bold;
     color: $text-dark;
+
     margin-bottom: 5px;
   }
 
   p {
     color: $text-secondary;
+
     margin: 5px 0;
   }
 
@@ -38,11 +47,16 @@
     display: flex;
     align-items: center;
     gap: 15px;
+
     background: $white;
-    padding: 10px;
+
     border: 1px solid #e0e0e0;
     border-radius: 5px;
+
     margin: 15px 0;
+
+    padding: 10px;
+
     transition: box-shadow 0.3s;
 
     &:hover {
@@ -52,13 +66,17 @@
     .bank-logo {
       width: 50px;
       height: auto;
+
       border-radius: 3px;
     }
 
     .copy-icon {
       color: $primary-color;
+
       margin-left: 8px;
+
       cursor: pointer;
+
       transition: color 0.3s;
 
       &:hover {
@@ -67,11 +85,12 @@
     }
   }
 
-  // Responsividade para telas menores
   @media (max-width: 768px) {
-    padding: 20px;
-    max-width: 100%;
+    max-width: 95%;
+
     margin: 15px auto;
+
+    padding: 20px;
 
     h2 {
       font-size: 1.5em;
@@ -82,23 +101,23 @@
     }
 
     .donation-option {
-      flex-direction: column; // Alinhar as opções de doação em coluna
-      align-items: flex-start; // Garantir que os elementos fiquem alinhados à esquerda
+      flex-direction: column;
+      align-items: flex-start;
+
       padding: 15px;
 
       .bank-logo {
-        width: 40px; // Reduzir o tamanho do logo
-        margin-bottom: 10px;
+        width: 60px;
       }
 
       .copy-icon {
-        margin-left: 0; // Ajuste para o ícone de copiar
-        margin-top: 5px; // Adicionar um pequeno espaço entre os ícones e texto
+        margin-left: 10px;
+        margin-top: 5px;
       }
 
       .donation-link {
         font-size: 0.9em;
-        word-wrap: break-word; // Evitar que o link ultrapasse a tela
+        word-wrap: break-word;
       }
     }
   }
