@@ -13,12 +13,10 @@
 
   background-color: $primary-color;
 
-  padding: 20px 0;
-  margin: 0;
+  padding: 20px;
 
   img {
     width: 80px;
-    margin-left: 20px;
   }
 
   nav {
@@ -49,7 +47,6 @@
       li a {
         font-size: 1.1rem;
         font-weight: 600;
-
         display: block;
 
         text-decoration: none;
@@ -99,19 +96,16 @@
 
     nav {
       position: static;
-
-      width: auto;
       max-height: none;
-
-      background-color: transparent;
+      width: auto;
+      background-color: transparent; 
       box-shadow: none;
 
       ul {
-        flex-direction: row;
+        flex-direction: row; 
         align-items: center;
-        gap: 20px;
-
-        padding: 0;
+        gap: 20px; 
+        padding: 0
 
         li a {
           padding: 10px 15px;
