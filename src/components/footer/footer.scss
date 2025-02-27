@@ -1,132 +1,118 @@
 @use '../../styles/variables.scss' as *;
 
-.footer {
-  font-size: 1em;
-  color: $text-primary;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  background-color: $background-light;
+  position: relative;
 
-  border-top: 1px solid $border-color;
+  color: $white;
 
-  padding: 40px 20px;
+  width: 100%;
 
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+  background-color: $primary-color;
 
-    @media (min-width: 768px) {
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 40px;
-    }
+  padding: 20px;
+
+  img {
+    width: 80px;
   }
 
-  .footer-description {
-    text-align: center;
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
 
-    max-width: 90%;
+    width: 100%;
+    max-height: 0;
 
-    h3 {
-      font-size: 1.5em;
-      color: $primary-color;
+    overflow: hidden;
 
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1em;
-      font-style: italic;
-      color: $text-secondary;
-    }
-  }
+    background-color: $primary-color;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  .footer-info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
+    transition: max-height 0.3s ease;
 
-    @media (min-width: 768px) {
-      text-align: left;
-    }
-
-    p {
+    ul {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
 
-      font-size: 1em;
-      color: $text-secondary;
-    }
+      padding: 10px 0;
 
-    a {
-      font-size: 1em;
-      text-decoration: none;
-      color: $text-secondary;
+      list-style: none;
 
-      transition: color 0.3s;
+      li a {
+        font-size: 1.2rem;
 
-      &:hover {
-        color: $primary-dark;
-      }
-    }
+        display: block;
 
-    .info-icon {
-      font-size: 1.2em;
-      color: $text-muted;
-    }
-  }
+        text-decoration: none;
+        color: $white;
 
-  .footer-social {
-    display: flex;
-    gap: 20px;
+        padding: 10px 20px;
 
-    .social-icon {
-      font-size: 1.5em;
-      color: $text-muted;
+        transition: color 0.3s ease;
 
-      transition: color 0.3s;
-
-      &:hover {
-        color: $primary-dark;
+        &:hover {
+          color: $primary-light;
+        }
       }
     }
   }
 
-  .divider {
-    width: 95%;
-    height: 2px;
+  .menu-toggle {
+    display: none;
 
-    background-color: $border-color;
+    position: relative;
+    z-index: 10;
 
-    margin: 30px auto;
-  }
+    font-size: 1.8rem;
+    color: $white;
 
-  .footer-copyright {
-    text-align: center;
-    font-size: 0.9em;
-    color: $text-tertiary;
+    background: none;
 
-    margin-top: 30px;
-    margin-bottom: -20px;
+    border: none;
+
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {
-    .footer-description {
-      max-width: 95%;
+    .menu-toggle {
+      display: block;
     }
-    .footer-info {
-      text-align: center;
 
-      p,
-      a {
-        font-size: 0.9em;
-      }
+    nav.nav-open {
+      max-height: 300px;
     }
-    .footer-social {
-      .social-icon {
-        font-size: 1.3em;
+  }
+
+  @media (min-width: 769px) {
+    .menu-toggle {
+      display: none;
+    }
+
+    nav {
+      position: static;
+
+      width: auto;
+      max-height: none;
+
+      background-color: transparent;
+      box-shadow: none;
+
+      ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+
+        padding: 0;
+
+        li a {
+          padding: 10px 15px;
+        }
       }
     }
   }
