@@ -26,7 +26,7 @@
   .footer-description {
     text-align: center;
 
-    max-width: 350px;
+    max-width: 90%;
 
     h3 {
       font-size: 1.5em;
@@ -34,7 +34,6 @@
 
       margin-bottom: 10px;
     }
-
     p {
       font-size: 1em;
       font-style: italic;
@@ -106,11 +105,29 @@
 
   .footer-copyright {
     text-align: center;
-
     font-size: 0.9em;
     color: $text-tertiary;
 
     margin-top: 30px;
     margin-bottom: -20px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-description {
+      max-width: 95%;
+    }
+    .footer-info {
+      text-align: center;
+
+      p,
+      a {
+        font-size: 0.9em;
+      }
+    }
+    .footer-social {
+      .social-icon {
+        font-size: 1.3em;
+      }
+    }
   }
 }
