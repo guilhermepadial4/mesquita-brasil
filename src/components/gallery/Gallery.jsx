@@ -25,11 +25,16 @@ export function Gallery() {
       <h2>Galeria</h2>
       <Swiper
         modules={[Autoplay, Navigation]}
-        spaceBetween={0}
+        spaceBetween={20}
         slidesPerView={3}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         navigation={true}
         loop={true}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
