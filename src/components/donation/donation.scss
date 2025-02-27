@@ -83,6 +83,18 @@
         color: $primary-dark;
       }
     }
+
+    .donation-link {
+      font-size: 1rem;
+      text-decoration: none;
+      color: $text-primary;
+
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
   }
 
   @media (max-width: 768px) {
@@ -116,8 +128,15 @@
       }
 
       .donation-link {
-        font-size: 0.9em;
-        word-wrap: break-word;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: $text-primary;
+
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
       }
     }
   }
