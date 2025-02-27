@@ -8,6 +8,7 @@ import { Footer } from '../components/footer/Footer';
 import IslamicImage from '../assets/islamic-moon.png';
 
 import './home.scss';
+import { Agenda } from '../components/agenda/Agenda';
 
 export const Home = () => {
   return (
@@ -21,6 +22,8 @@ export const Home = () => {
       <Gallery />
 
       <Religion />
+      
+      <Agenda />
 
       <DonationCard />
 
