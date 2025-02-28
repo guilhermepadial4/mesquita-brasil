@@ -1,26 +1,27 @@
 import { useState, useEffect } from 'react';
 import People7 from '../../assets/people7.png';
-import People from '../../assets/people.png';
-import People3 from '../../assets/people3.png';
+import IslamicFamily from '../../assets/islamic-family.png';
+import PeoplePrayer from '../../assets/people-prayer3.png';
 
 import './about.scss';
 
 export function About() {
-  const images = [People7, People, People3];
+  const images = [People7, IslamicFamily, PeoplePrayer];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(true);
+
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFade(false);
-      }, 500); // Tempo do fade-out antes de trocar a imagem
-    }, 3000); // Troca a cada 3 segundos
+      }, 500);
+    }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section id="about" className="about">

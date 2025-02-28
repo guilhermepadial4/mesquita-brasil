@@ -2,9 +2,6 @@
 
 .about {
   padding: 50px 20px;
-  background-color: $background-light;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   .about-content {
     display: flex;
@@ -15,21 +12,19 @@
     .about-text {
       flex: 1;
       text-align: left;
+
       max-width: 600px;
 
       h2 {
         color: $primary-dark;
-        font-size: 2.5rem;
+
         margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
       }
 
       p {
         color: $text-secondary;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        font-size: 1.1rem;
+
+        width: 100%;
       }
 
       a {
@@ -41,9 +36,10 @@
         font-weight: bold;
         text-transform: uppercase;
         color: $primary-color;
+
         margin-top: 20px;
+
         cursor: pointer;
-        transition: color 0.3s ease;
 
         &:hover {
           color: $primary-dark;
@@ -53,14 +49,23 @@
 
     .about-image {
       flex: 0 0 auto;
-      max-width: 40%;
+
       position: relative;
+
+      max-width: 40%;
+
+      overflow: hidden;
 
       img {
         width: 100%;
-        height: 350px;  // Altura fixa para manter o padrão
+        height: auto;
+
+        opacity: 1;
+
         object-fit: cover;
+
         border-radius: 8px;
+
         transition: opacity 0.5s ease-in-out;
 
         &.fade-in {
@@ -72,24 +77,20 @@
         }
       }
     }
-  }
 
-  // Responsividade para tablets e celulares
-  @media (max-width: 768px) {
-    .about-content {
+    @media (max-width: 768px) {
       flex-direction: column;
       align-items: center;
       text-align: center;
 
       .about-image {
         max-width: 80%;
+
         margin-top: 20px;
       }
     }
-  }
 
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .about-content {
+    @media (min-width: 769px) and (max-width: 1024px) {
       gap: 30px;
 
       .about-image {
