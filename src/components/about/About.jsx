@@ -8,23 +8,25 @@ import './about.scss';
 export function About() {
   const images = [People7, IslamicFamily, PeoplePrayer];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [fade, setFade] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(true);
-
-      setTimeout(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setFade(false);
-      }, 500);
-    }, 3000);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
-    <section id="about" className="about">
+    <section
+      id="about"
+      className="about"
+      style={{
+        backgroundImage: `url(${images[currentImageIndex]})`,
+        opacity: 1,
+        transition: 'opacity 1s ease-in-out',
+      }}
+    >
       <div className="about-content">
         <div className="about-text">
           <h2>Sobre a Mesquita Brasil</h2>
@@ -39,9 +41,6 @@ export function About() {
           >
             <p className="invitation">Venha nos conhecer e fazer parte dessa jornada de fé!</p>
           </a>
-        </div>
-        <div className="about-image">
-          <img src={images[currentImageIndex]} alt="Imagem da Mesquita" className={fade ? 'fade-out' : 'fade-in'} />
         </div>
       </div>
     </section>
