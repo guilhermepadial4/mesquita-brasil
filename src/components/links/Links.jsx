@@ -11,7 +11,7 @@ export function Links() {
             <h3>Escola Islâmica</h3>
             <p>Educação de qualidade com valores islâmicos.</p>
           </a>
-          <a href="#" className="link-item">
+          <a href="https://cemiterio-mesquita-brasil.vercel.app/" target="_blank" rel="noopener noreferrer" className="link-item">
             <h3>Cemitério Islâmico</h3>
             <p>Serviços funerários de acordo com os princípios islâmicos.</p>
           </a>
