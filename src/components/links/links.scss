@@ -1,0 +1,76 @@
+@use '../../styles/variables.scss' as *;
+
+.links {
+  text-align: center;
+  color: $white;
+
+  background-color: $primary-dark;
+
+  padding: 50px 20px;
+
+  .links-content {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+  }
+
+  .links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin-top: 20px;
+
+    .link-item {
+      display: block;
+
+      text-decoration: none;
+      color: $white;
+
+      background-color: $primary-color;
+
+      padding: 20px;
+
+      border-radius: 8px;
+
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+
+        background-color: $primary-light;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .links-grid {
+      flex-direction: row;
+      justify-content: center;
+
+      .link-item {
+        width: 45%;
+      }
+    }
+  }
+}

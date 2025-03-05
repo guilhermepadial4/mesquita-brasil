@@ -9,6 +9,7 @@ import IslamicImage from '../assets/islamic-moon.png';
 
 import './home.scss';
 import { Agenda } from '../components/agenda/Agenda';
+import { Links } from '../components/links/Links';
 
 export const Home = () => {
   return (
@@ -22,10 +23,12 @@ export const Home = () => {
       <Gallery />
 
       <Religion />
-      
+
       <Agenda />
 
       <DonationCard />
+
+      <Links />
 
       <Footer />
     </div>
